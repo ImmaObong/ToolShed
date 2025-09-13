@@ -3,7 +3,7 @@
 # A comprehensive script to automate the entire Clarity project setup process.
 
 # --- Configuration ---
-GITHUB_USERNAME="ImmaObong"
+GITHUB_USERNAME="YourGitHubUsername"
 
 # The GitHub PAT is now stored securely as a Replit Secret.
 if [ -z "$GITHUB_PAT" ]; then
@@ -48,8 +48,8 @@ git init
 
 # --- Add New Steps: Copy Scripts and Configure Gitignore ---
 echo "5. Copying utility scripts into the project folder..."
-cp ../ClarCommit.sh .
-cp ../FinCommit.sh .
+cp ../ToolShed/ClarCommit.sh .
+cp ../ToolShed/FinCommit.sh .
 
 echo "6. Adding scripts to .gitignore to prevent tracking..."
 echo "" >> .gitignore
@@ -89,3 +89,6 @@ echo "13. Opening contract in the editor..."
 code "contracts/$CONTRACT_NAME.clar"
 
 echo "✅ All steps completed! Project '$PROJECT_NAME' is ready."
+echo
+
+echo "Great Job 🎉! Your Clarity project setup is complete. You can now start developing your smart contract."
